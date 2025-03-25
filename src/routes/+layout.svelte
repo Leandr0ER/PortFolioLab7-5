@@ -1,6 +1,6 @@
 <script>
-import { base } from '$app/paths';  
-alert(`Base path: ${base}`);
+import { base } from '$app/paths';
+import { page } from "$app/stores";
 let pages = [
   { url: "/", title: "Home" },
   { url: "/projects", title: "Projects" },
@@ -14,7 +14,7 @@ let pages = [
   <a
             href={p.url.startsWith("http") 
                 ? p.url 
-                : ${base}${p.url}}
+                : `${base}${p.url}`}
             class:current={$page.route.id === p.url}
             target={p.url.startsWith("http") ? "_blank" : undefined}
         >
