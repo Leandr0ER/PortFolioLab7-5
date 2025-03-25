@@ -1,6 +1,6 @@
 <script>
-import { base } from '$app/paths';
-alert("{{base}}");
+import { base } from '$app/paths';  
+alert(`Base path: ${base}`);
 let pages = [
   { url: "/{{base}}", title: "Home" },
   { url: "{{base}}/projects", title: "Projects" },
