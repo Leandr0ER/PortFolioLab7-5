@@ -11,10 +11,13 @@ let pages = [
 </script>
 <nav>
   {#each pages as p}
-  <a href={p.url.startsWith("http") ? p.url : ${base}${p.url}}
-    class:current={$page.route.id === p.url}
-    target={p.url.startsWith("http") ? "_blank" : undefined}
-  >
+  <a
+            href={p.url.startsWith("http") 
+                ? p.url 
+                : ${base}${p.url}}
+            class:current={$page.route.id === p.url}
+            target={p.url.startsWith("http") ? "_blank" : undefined}
+        >
     {p.title}
   </a>
   {/each}
