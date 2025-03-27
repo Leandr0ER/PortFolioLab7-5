@@ -4,8 +4,13 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="%sveltekit.assets%/style.css" />
+		<!--<link rel="stylesheet" href="%sveltekit.assets%/style.css" />-->
 		<!--<script src="%sveltekit.assets%/global.js" type="module"></script>-->
+		<script>
+			let root = document.documentElement;
+			let colorScheme = localStorage.colorScheme ?? "light dark";
+			root.style.setProperty("color-scheme", colorScheme);
+		</script>		  
 		<title>Portafolio 3</title>
 		%sveltekit.head%
 	</head>

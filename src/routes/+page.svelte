@@ -11,6 +11,7 @@
     Mike's world gets turned upside down when a human girl (nicknamed "Boo") enters the monster world.
     Teaming up with Sulley to return Boo to her world, Mike uncovers a company conspiracy and helps solve an energy crisis that plagues the entire city of Monstropolis
 </p>
+
 <h2>Latest projects</h2>
 <div class="projects">
 {#each projects.slice(0, 3) as p}

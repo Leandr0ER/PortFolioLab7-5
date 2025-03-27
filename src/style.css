@@ -55,14 +55,6 @@ nav a:hover {
 	background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-.color-scheme{
-	position:absolute;
-	top: 1rem;
-	right: 1rem;
-	display: inline-flex;
-	gap: 5px;
-}
-
 input,textarea,button {
     font: inherit; /*step 3.1 schmoopsie.poo@mic.fr*/
 }
