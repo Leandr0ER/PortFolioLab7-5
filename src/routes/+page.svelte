@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>My page</title>
+</svelte:head>
+
 <script>
     import projects from "$lib/projects.json";
     import Project from "$lib/Project.svelte";
