@@ -10,3 +10,12 @@
         {data.description}
     </p>
 </article>
+
+<style>
+    p {
+        font-size: 0.7em;
+    }
+    img {
+        height: 12em;
+    }
+</style>
