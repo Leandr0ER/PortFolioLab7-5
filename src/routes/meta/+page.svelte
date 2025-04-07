@@ -5,7 +5,7 @@ import { onMount } from "svelte";
 let data = [];
 
 onMount(async () => {
-	data = await d3.csv("/loc.csv");
+	data = await d3.csv("./loc.csv");
 });
 
 </script>
