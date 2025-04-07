@@ -50,29 +50,6 @@ $: console.log(localStorage);
 </label>
 
 <slot />
-{#await fetch("https://api.github.com/users/Mike-Kowalski")}
-  <p>Loading...</p>
-{:then response}
-  {#await response.json()}
-    <p>Decoding...</p>
-  {:then data}
-    <section>
-      <h2>My GitHub Stats</h2>
-      <dl>
-        <dt>Followers:</dt>
-        <dd>{data.followers}</dd>
-        <dt>Following:</dt>
-        <dd>{data.following}</dd>
-        <dt>Public Repositories:</dt>
-        <dd>{data.public_repos}</dd>
-      </dl>
-    </section>
-  {:catch error}
-    <p class="error">Something went wrong: {error.message}</p>
-  {/await}
-{:catch error}
-  <p class="error">Something went wrong: {error.message}</p>
-{/await}
 <style>
 nav ul,
 nav il {
