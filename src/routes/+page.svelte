@@ -22,7 +22,7 @@
         loading = false;
     });
 
-    </script>
+</script>
 <h1> Mike Wazowski</h1>
    
 <img src="./images/my_image.jpeg" alt="mike" width="500px">
