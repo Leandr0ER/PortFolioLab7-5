@@ -64,6 +64,9 @@
 
     let clickedCommits = [];
 
+    // AÑADIR ESTADO DE CARGA
+    let loading = true;
+
     async function dotInteraction (index, evt) {
         let hoveredDot = evt.target;
         const commit = filteredCommits[index];
@@ -123,6 +126,8 @@
             return ret;
         });
         commits = d3.sort(commits, d => -d.totalLines);
+        // CAMBIAR ESTADO DE CARGA A FALSO CUANDO LOS DATOS SE CARGAN
+        loading = false;
     });
 
 
@@ -187,7 +192,13 @@
         <label for="slider">Show commits until:</label>
         <input type="range" id="slider" name="slider" min=0 max=100 bind:value={commitProgress}/>
     </div>
-    <time class="time-label">{commitMaxTime.toLocaleString()}</time>
+    <time class="time-label">
+        {#if loading}
+            Cargando...
+        {:else}
+            {commitMaxTime.toLocaleString()}
+        {/if}
+    </time>
 </div>
 
 
