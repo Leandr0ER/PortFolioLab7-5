@@ -38,8 +38,6 @@ let clickedCommits = [];
 
 let commitProgress = 100; 
 
-
-
 async function dotInteraction (index, evt) {
     let hoveredDot = evt.target;
     if (evt.type === "mouseenter") {
