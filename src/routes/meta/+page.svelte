@@ -36,6 +36,10 @@ let tooltipPosition = {x: 0, y: 0};
 
 let clickedCommits = [];
 
+let commitProgress = 100; 
+
+
+
 async function dotInteraction (index, evt) {
     let hoveredDot = evt.target;
     if (evt.type === "mouseenter") {
@@ -66,7 +70,7 @@ async function dotInteraction (index, evt) {
 }
 
 onMount(async () => {
-	data = await d3.csv("./loc.csv", row => ({
+	data = await d3.csv("/loc.csv", row => ({
     	...row,
     	line: Number(row.line), // or just +row.line
     	depth: Number(row.depth),
@@ -97,6 +101,7 @@ onMount(async () => {
 
     	return ret;
 	});
+    commits = d3.sort(commits, d => -d.totalLines);
 });
 
 
@@ -146,6 +151,12 @@ $: selectedCounts = d3.rollup(
 
 $: languageBreakdown = allTypes.map(type => [type, selectedCounts.get(type) || 0]);
 
+$: timeScale = d3.scaleTime().domain([minDate,maxDate]).range([0,100]);
+
+$: commitMaxTime = timeScale.invert(commitProgress);
+
+
+
 </script>
 <svelte:head>
 <title>Meta</title>
@@ -167,6 +178,15 @@ $: languageBreakdown = allTypes.map(type => [type, selectedCounts.get(type) || 0
     <dt>Time</dt>
     <dd>{ hoveredCommit.time }</dd>
 </dl>
+
+<!-- Lab 7.5 -->
+<div class="slider-container">
+    <div class="slider">
+        <label for="slider">Show commits until:</label>
+        <input type="range" id="slider" name="slider" min=0 max=100 bind:value={commitProgress}/>
+    </div>
+    <time class="time-label">{commitMaxTime.toLocaleString()}</time>
+</div>
 
 
 <svg viewBox="0 0 {width} {height}">
@@ -286,5 +306,19 @@ circle {
     fill: var(--color-accent);
 }
 
-</style>
-	
+/* Lab 7.5 */
+.slider-container{
+	display:grid;
+}
+.slider{
+	display: flex;
+}
+#slider{
+	flex:1;
+}
+.time-label{
+	font-size: 0.75em;
+	text-align: right;
+}
+
+</style>	

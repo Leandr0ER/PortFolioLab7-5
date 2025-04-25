@@ -23,14 +23,14 @@
     });
 
 </script>
-<h1> Mike Wazowski</h1>
+<h1> Mike Corleone</h1>
    
-<img src="./images/my_image.jpeg" alt="mike" width="500px">
+<img src="./images/Imagen001.jpg" alt="mike" width="500px">
     
-<p>Michael "Mike" Thomas Wazowski is the deuteragonist of the 2001 Disney Pixar animated film Monsters, Inc. and the protagonist of its 2013 prequel.
-    Depicted as a diminutive, one-eyed monster with a wisecracking veneer, Mike is an employee of Monsters, Incorporated, where he works closely with his longtime partner/best friend Sulley.
-    Mike's world gets turned upside down when a human girl (nicknamed "Boo") enters the monster world.
-    Teaming up with Sulley to return Boo to her world, Mike uncovers a company conspiracy and helps solve an energy crisis that plagues the entire city of Monstropolis
+<p>Michael "Mike" Corleone is the protagonist of the 1972 Paramount Pictures crime film The Godfather and its 1974 sequel The Godfather Part II.
+    Depicted as the youngest son of Vito Corleone, the head of a powerful Mafia family, Mike is a highly intelligent and initially reluctant participant in his family's criminal enterprise.
+    Mike's world takes a dramatic turn when his father is targeted by rival Mafia families.
+    Stepping up to protect his family, Mike becomes increasingly involved in their dangerous world, eventually uncovering betrayals and playing a key role in consolidating the Corleone family's power and solving internal conflicts.
 </p>
 
 <h2>Latest projects</h2>
